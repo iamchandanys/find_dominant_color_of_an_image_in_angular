@@ -13,6 +13,6 @@ export class CanvasImage {
     }
 
     getImageData() {
-        return this.context?.getImageData(0, 0, this.width, this.height);
+        return this.context.getImageData(0, 0, this.width, this.height);
     }
 }

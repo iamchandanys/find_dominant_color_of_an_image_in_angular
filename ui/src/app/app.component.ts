@@ -8,16 +8,19 @@ import { FindDominantColor } from './helper/find-dominant-color';
 })
 export class AppComponent {
   title = 'ui';
-  source = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8tOUTr9UaErM7RIJgm2UnP9-_bM_z8LNsKL14Y88KNCdrTC4FUet5FlU&s';
+  imageUrl = '';
+  colorCode = '';
 
-  constructor() {
+  constructor() { }
+
+  getColorCode() {
     let img = document.createElement('img');
-    img.setAttribute('src', this.source);
+    img.setAttribute('src', this.imageUrl);
     img.crossOrigin = "Anonymous";
-    img.addEventListener('load', function () {
+    img.addEventListener('load', () => {
       let findDominantColor = new FindDominantColor();
       let dColor = findDominantColor.getDominantColor(img, 10);
-      console.log(dColor);
+      this.colorCode = dColor;
     });
   }
 }

@@ -18,7 +18,7 @@ export class FindDominantColor {
 
         // Create custom CanvasImage object
         const image = new CanvasImage(sourceImage);
-        const imageData = image.context?.getImageData(0, 0, image.width, image.height); // ToDo
+        const imageData = image.getImageData();
         const pixelCount = image.width * image.height;
         const pixelArray = CanvasCore.createPixelArray(imageData?.data, pixelCount, options.quality);
 
