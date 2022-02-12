@@ -8,3 +8,6 @@ To find the Dominant color from an image url.
 
 # Page Screenshot
 ![alt text](https://github.com/iamchandanys/find_dominant_color_of_an_image_in_angular/blob/main/ui/src/assets/screenshot.png?raw=true)
+
+# Reference
+https://github.com/lokesh/color-thief
